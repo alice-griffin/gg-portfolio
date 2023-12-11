@@ -4,6 +4,9 @@ import React, { useState } from 'react';
 import "yet-another-react-lightbox/styles.css"; 
 import Zoom from "yet-another-react-lightbox/plugins/zoom";
 import Lightbox from 'yet-another-react-lightbox';
+import Nav from '@/components/NavBar'
+import Footer from '@/components/Footer'
+
 
 
 export default function Home() {
@@ -63,7 +66,7 @@ export default function Home() {
     ]
 
   return (
-    <main className="bg-white">
+    <main id="mainDiv">
       <div className="gap-1 columns-2 sm:columns-2 lg:columns-3 xl:columns-4 [&>img:not(:first-child)]:mt-1">
         {slides.map((img, index) => {
           return (

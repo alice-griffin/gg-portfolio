@@ -1,10 +1,43 @@
-@import url('https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text&family=Montserrat:wght@400;700&family=Mulish:wght@900&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+* {
+  scrollbar-width: 12x;/*thin;*/
+  scrollbar-color: #AAC0AA;
+}
+*::-webkit-scrollbar {
+  width: 12px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #AAC0AA;
+  border-radius: 1px;
+}
+
 body {
-  background: white;
-  height: 100vh;
+  background: #FFFAF0;
+  background-color: #FFFAF0;
+  padding-left: 5%;
+  padding-right: 5%;
+  min-height: 100vh;
+  max-width: 100%;
+  color: #2A1A1F;
+}
+
+nav {
+  font-size: 24px;
+  color: #2A1A1F;
+}
+
+ul {
+  background-color: #FFFAF0;
+}
+
+
+@media (max-width: 768px){
+  .lock-scroll {
+    overflow: hidden;
+  }
 }

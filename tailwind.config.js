@@ -8,7 +8,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        crimsonText: ['Crimson Text', 'sans-serif'],
+        'crimsonText': ['Crimson Text', 'serif'],
+        'montserrat': ['Montserrat', 'sans-serif']
       }
     },
   },
