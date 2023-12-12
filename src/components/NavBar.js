@@ -1,6 +1,6 @@
 'use client'
 import Link from 'next/link';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { faX } from '@fortawesome/free-solid-svg-icons';
@@ -10,15 +10,17 @@ function Nav() {
 
     const [showNav, setShowNav] = useState(false);
 
-
-    showNav ? document.body.classList.add('lock-scroll') : document.body.classList.remove('lock-scroll');
-
-    window.addEventListener('resize', function(e) {
-      if (window.innerWidth > 768) {
-        setShowNav(false);
-      }
-    })
-
+    useEffect(() => {
+        showNav ? document.body.classList.add('lock-scroll') : document.body.classList.remove('lock-scroll');
+    }, [showNav])
+    
+    if (typeof window !== "undefined") {
+        window.addEventListener('resize', function(e) {
+          if (window.innerWidth > 768) {
+            setShowNav(false);
+          }
+        })
+    }
 
     return (
         <div className="py-10">
