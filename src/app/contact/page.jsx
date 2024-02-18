@@ -31,28 +31,30 @@ export default function Page() {
       <div>
         <div>
           <p>
-            Inquire about having a comissioned painting done below. I will respond as soon as possible to the email provided.
+            Interested in having a piece commissioned? Inquire below.
           </p>
         </div>
-        <form ref={form} onSubmit={handleSubmit}>
-          <div>
+        <form ref={form} onSubmit={handleSubmit} class='my-5 sm: w-full lg:w-1/2'>
+          <div class="my-2">
               <input required type="text" autoComplete="off" name="user_name" placeholder="Name" />
           </div>
-          <div>
+          <div class="my-2">
             <input required type="email" autoComplete="off" name="user_email" placeholder="Email"/>
           </div>
-          <div>
+          <div class="my-2">
             <textarea rows={4}
             required
-            className="w-full"
+            className="w-2/3"
             name="message"
             placeholder="Comission details"
             />
           </div>
           <button
             type="submit"
-            disabled={loading}>
-            Send Message
+            disabled={loading}
+            class="my-2"
+            >
+            Send
           </button>
         </form>
       </div>
