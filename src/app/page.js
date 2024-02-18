@@ -64,10 +64,10 @@ export default function Home() {
 
   return (
     <main id="mainDiv">
-      <div className="gap-1 columns-1 sm:columns-2 lg:columns-3 xl:columns-4 [&>img:not(:first-child)]:mt-1">
+      <div className="columns-1 sm:columns-2 lg:columns-3 xl:columns-4 [&>img:not(:first-child)]:mt-1">
         {slides.map((img, index) => {
           return (
-            <div key={index}>
+            <div key={index} className="mb-5 md:mb-2 lg:mb-2">
               <img src={img.src} onClick={() => {setOpen(true); setIndex(index)}} />
             </div>
           );

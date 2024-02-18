@@ -46,7 +46,7 @@ function Nav() {
                 </div>
             </nav>
             <div id="navDiv" className={clsx(showNav ? 'md:hidden visible absolut h-screen pt-8' : 'md:hidden invisible' )}>
-                <ul className={clsx(showNav ? "h-[calc(vh-5rem)] flex flex-col items-center justify-center z-10 w-screen font-crimsonText text-lg" : "hidden")}>
+                <ul className={clsx(showNav ? "h-[calc(vh-5rem)] flex flex-col items-center justify-center z-10 font-crimsonText text-lg" : "hidden")}>
                     <li>
                         <Link href="/about" onClick={() => setShowNav(!showNav)}>
                             about
